@@ -1,8 +1,11 @@
-#!/bin/bash
+@echo off
 
-read -p "Masukan commit label :  " commit
+:: Prompt for commit message
+set /p commit="Masukan commit label: "
+
+:: Stage changes, commit, and push
 git add .
-git status
-read -p "Tekan enter untuk melanjutkan :  " random
-git commit -m "$commit"
+git commit -m "%commit%"
 git push -u origin main
+
+echo Changes pushed successfully.
