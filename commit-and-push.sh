@@ -5,4 +5,4 @@ git add .
 git status
 read -p "Tekan enter untuk melanjutkan :  " random
 git commit -m "$commit"
-git push -u origin main
+git push -u origin master
